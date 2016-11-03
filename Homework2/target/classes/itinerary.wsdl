@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://resource/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ItineraryServiceResourceImplService" targetNamespace="http://resource/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://resource/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://resource/">
+  <xs:element name="findItineraries" type="tns:findItineraries"/>
+  <xs:element name="findItinerariesResponse" type="tns:findItinerariesResponse"/>
+  <xs:element name="getItinerary" type="tns:getItinerary"/>
+  <xs:element name="getItineraryResponse" type="tns:getItineraryResponse"/>
+  <xs:complexType name="getItinerary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getItineraryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:itinerary"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="itinerary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dest" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="route" nillable="true" type="tns:flight"/>
+      <xs:element minOccurs="0" name="src" type="xs:string"/>
+      <xs:element minOccurs="0" name="totalCost" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="airline" type="xs:string"/>
+      <xs:element minOccurs="0" name="arrival" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="departure" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="dest" type="xs:string"/>
+      <xs:element minOccurs="0" name="price" type="xs:double"/>
+      <xs:element minOccurs="0" name="src" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findItineraries">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findItinerariesResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:itinerary"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotAllowedException" type="tns:NotAllowedException"/>
+  <xs:complexType name="NotAllowedException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getItinerary">
+    <wsdl:part element="tns:getItinerary" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findItinerariesResponse">
+    <wsdl:part element="tns:findItinerariesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findItineraries">
+    <wsdl:part element="tns:findItineraries" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getItineraryResponse">
+    <wsdl:part element="tns:getItineraryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="NotAllowedException">
+    <wsdl:part element="tns:NotAllowedException" name="NotAllowedException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ItineraryServiceResource">
+    <wsdl:operation name="getItinerary">
+      <wsdl:input message="tns:getItinerary" name="getItinerary">
+    </wsdl:input>
+      <wsdl:output message="tns:getItineraryResponse" name="getItineraryResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:NotAllowedException" name="NotAllowedException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findItineraries">
+      <wsdl:input message="tns:findItineraries" name="findItineraries">
+    </wsdl:input>
+      <wsdl:output message="tns:findItinerariesResponse" name="findItinerariesResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:NotAllowedException" name="NotAllowedException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ItineraryServiceResourceImplServiceSoapBinding" type="tns:ItineraryServiceResource">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getItinerary">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getItinerary">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getItineraryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NotAllowedException">
+        <soap:fault name="NotAllowedException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findItineraries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findItineraries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findItinerariesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NotAllowedException">
+        <soap:fault name="NotAllowedException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ItineraryServiceResourceImplService">
+    <wsdl:port binding="tns:ItineraryServiceResourceImplServiceSoapBinding" name="ItineraryServiceResourceImplPort">
+      <soap:address location="http://localhost:8080/soap/itinerary"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
