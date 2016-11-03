@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com/myns/" targetNamespace="http://www.w3schools.com/myns/" elementFormDefault="qualified">
+	<xs:element name="transcript">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="degrees" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="degree">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="uniName">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:minLength value="2"/>
+													<xs:maxLength value="9"/>
+													<xs:pattern value="([A-Z])*"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="type" type="xs:string"/>
+										<xs:element name="GPA">
+											<xs:simpleType>
+												<xs:restriction base="xs:float">
+													<!--<xs:fractionDigits value="2"/>-->
+													<xs:minExclusive value="0"/>
+													<xs:pattern value="\d+\.\d"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="courses" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="course">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="courseName" type="xs:string"/>
+										<xs:element name="creditHours" type="xs:float"/>
+										<xs:element name="grade">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:length value="1"/>
+													<xs:enumeration value="A"/>
+													<xs:enumeration value="B"/>
+													<xs:enumeration value="C"/>
+													<xs:enumeration value="D"/>
+													<!--<xs:pattern value="[ABCD]"/> -->
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="score" type="xs:float"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applicantProfile xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                   xmlns='http://www.w3schools.com/myns/'
+                   xsi:schemaLocation='http://www.w3schools.com/myns/ file://schemas/ApplicantProfile.xsd'>
+
+    <userdata>
+        <fullname>Johan Johansson</fullname>
+        <personnummer>880513-1234</personnummer>
+        <personalLetter>I am the best in the world</personalLetter>
+    </userdata>
+
+    <employmentRecord>
+        <employment>
+            <code>5000</code>
+            <from>2014-09-19</from>
+            <to>2015-09-19</to>
+        </employment>
+        <employment>
+            <code>5001</code>
+            <from>2015-09-20</from>
+            <to>2016-09-19</to>
+        </employment>
+        <employment>
+            <code>5002</code>
+            <from>2016-09-20</from>
+            <to>2017-09-19</to>
+        </employment>
+    </employmentRecord>
+
+    <degrees>
+        <degree>
+            <uniName>KTH</uniName>
+            <type>Bachelor</type>
+            <GPA>3.5</GPA>
+        </degree>
+    </degrees>
+</applicantProfile>

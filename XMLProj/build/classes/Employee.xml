@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<Employees>
+    <Employee id="1234">
+        <Name>Ram</Name>
+        <Name>Tulsi</Name>
+        <Department>IT Department</Department>
+        <Company>CSC Ltd</Company>
+        <Salary>5000</Salary>
+        <Address>
+            <Street>2nd Main</Street>
+            <City>Bangalore</City>
+        </Address>
+        <Contact>
+            <Phone>9886611189</Phone>
+            <Email>tulsiram.l@gmail.com</Email>
+        </Contact>
+    </Employee> 
+    <Employee id="1235">
+        <Name>Ram</Name>
+         <Name>Tulsi12121</Name>
+        <Department>IT Department</Department>
+        <Company>CSC Ltd</Company>
+        <Salary>5000</Salary>
+        <Address>
+            <Street>2nd Main</Street>
+            <City>Bangalore</City>
+        </Address>
+        <Contact>
+            <Phone>9886611189</Phone>
+            <Email>tulsiram.l@gmail.com</Email>
+        </Contact>
+    </Employee>    
+</Employees>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<applicantProfile>
+  <userdata>
+    <fullname xmlns="http://www.w3schools.com/myns/">Johan Johansson</fullname>
+    <personnummer xmlns="http://www.w3schools.com/myns/">880513-1234</personnummer>
+    <personalLetter xmlns="http://www.w3schools.com/myns/">I am the best in the world</personalLetter>
+  </userdata>
+  <employmentRecord>
+    <employment xmlns="http://www.w3schools.com/myns/">
+        <code>5000</code>
+        <from>2014-09-19</from>
+        <to>2015-09-19</to>
+    </employment>
+    <employment xmlns="http://www.w3schools.com/myns/">
+        <code>5001</code>
+        <from>2015-09-20</from>
+        <to>2016-09-19</to>
+    </employment>
+    <employment xmlns="http://www.w3schools.com/myns/">
+        <code>5002</code>
+        <from>2016-09-20</from>
+        <to>2017-09-19</to>
+    </employment>
+  </employmentRecord>
+  <transcript>
+    <degrees xmlns="http://www.w3schools.com/myns/">
+        <degree>
+            <uniName>KTH</uniName>
+            <type>Bachelor</type>
+            <GPA>0</GPA>
+        </degree>
+    </degrees>
+  </transcript>
+</applicantProfile>

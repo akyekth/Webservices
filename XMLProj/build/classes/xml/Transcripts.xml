@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transcript xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                   xmlns='http://www.w3schools.com/myns/'
+                   xsi:schemaLocation='http://www.w3schools.com/myns/ file://schemas/Transcripts.xsd'>
+
+    <degrees>
+        <degree>
+            <uniName>KTH</uniName>
+            <type>Bachelor</type>
+            <GPA>0</GPA>
+        </degree>
+    </degrees>
+
+    <courses>
+        <course>
+            <courseName>Introduction to Algorithms</courseName>
+            <crediHours>3</crediHours>
+            <grade>A</grade>                
+            <score>B</score>
+        </course>
+        <course>
+            <courseName>Software Engineering</courseName>
+            <crediHours>2</crediHours>
+            <grade>B</grade>  
+            <score>A</score>
+        </course>
+    </courses>
+
+</transcript>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<companyInfo xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+             xmlns='http://www.w3schools.com/myns/'
+             xsi:schemaLocation='http://www.w3schools.com/myns/ file://schemas/CompanyInfo.xsd'>
+
+    <company>
+        <name>Google</name>
+        <code>5000</code>
+        <phone>08-55556000</phone>
+    </company>
+    <company>
+        <name>Spotify</name>
+        <code>5001</code>
+        <phone>08-55556001</phone>
+    </company>
+    <company>
+        <name>Ericsson</name>
+        <code>5002</code>
+        <phone>08-55556002</phone>
+    </company>
+
+</companyInfo>

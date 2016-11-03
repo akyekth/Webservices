@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortCV xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                   xmlns='http://www.w3schools.com/myns/'
+                   xsi:schemaLocation='http://www.w3schools.com/myns/ file://schemas/ShortCV.xsd'>
+
+    <fullname>Johan Johansson</fullname>
+    <personnummer>880513-1234</personnummer>
+    <briefBio>Grew up in North Sweden</briefBio>
+    <personalLetter>I am the best in the world</personalLetter>
+
+</shortCV>

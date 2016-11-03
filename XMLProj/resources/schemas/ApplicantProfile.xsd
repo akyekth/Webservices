@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3schools.com/myns/" targetNamespace="http://www.w3schools.com/myns/" elementFormDefault="qualified">
+	<xs:include schemaLocation="CompanyInfo.xsd"/>
+	<xs:include schemaLocation="EmploymentRecord.xsd"/>
+	<xs:include schemaLocation="ShortCV.xsd"/>
+	<xs:include schemaLocation="Transcripts.xsd"/>
+	<xs:element name="applicantProfile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="userdata">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="fullname" type="xs:string"/>
+							<xs:element name="personnummer" type="xs:string"/>
+							<xs:element name="personalLetter" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employmentRecord">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employment">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="code" type="xs:string"/>
+										<xs:element name="from" type="xs:date"/>
+										<xs:element name="to" type="xs:date"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="degrees">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="degree">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="uniName" type="xs:string"/>
+										<xs:element name="type" type="xs:string"/>
+										<xs:element name="GPA" type="xs:float"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
