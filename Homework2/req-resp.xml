@@ -1,0 +1,50 @@
+=====================REQUEST=====================:
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header>
+		<Username xmlns="http://impl.ws.fligh.com/">tulsiram.l</Username>
+		<Password xmlns="http://impl.ws.fligh.com/">ram1234@</Password>
+	</SOAP-ENV:Header>
+	<SOAP-ENV:Body>
+		<ns2:bookTicketRequest xmlns:ns2="http://www.example.org/flightReservation/">
+    		<itineraryCode>CHN-BGL</itineraryCode>
+    		<flightNumber>AIRIND1000</flightNumber>
+    		<seatNumber>4</seatNumber>
+    		<creditCardNumber>1234123412</creditCardNumber>
+		</ns2:bookTicketRequest>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+=====================RESPONSE=====================:
+-------------INVALID CREDENTIALS----------
+
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+<S:Body>
+	<S:Fault xmlns:ns4="http://www.w3.org/2003/05/soap-envelope">
+		<faultcode>S:Server</faultcode>
+		<faultstring>INVALID_USER</faultstring>
+		<detail>
+			<ns2:Fault xmlns:ns2="http://www.example.org/flightReservation/">
+				<faultCode>INVALID_USER</faultCode>
+				<faultString>Unauthorized User !!!!</faultString>
+			</ns2:Fault>
+		</detail>
+	</S:Fault>
+</S:Body>
+</S:Envelope>
+
+-------------VALID CREDENTIALS----------
+
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+	<S:Body>
+		<ns2:bookTicketResponse xmlns:ns2="http://www.example.org/flightReservation/">
+			<ticketNumber>1004</ticketNumber>
+			<itineraryCode>CHN-BGL</itineraryCode>
+			<flightNumber>AIRIND1000</flightNumber>
+			<seatNumber>4</seatNumber>
+			<paymentSuccess>Success</paymentSuccess>
+		</ns2:bookTicketResponse>
+	</S:Body>
+</S:Envelope>
